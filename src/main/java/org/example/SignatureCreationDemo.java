@@ -11,6 +11,9 @@ public class SignatureCreationDemo {
 
       // Create the Signature object
       Signature signature = Signature.getInstance("SHA1withDSA");
+
+      System.out.println("signature: " + signature);
+
       signature.initSign(keyPair.getPrivate(), new SecureRandom());
 
       // Message to be signed
